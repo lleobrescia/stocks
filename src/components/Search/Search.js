@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import AsyncSelect from 'react-select/lib/Async';
+import { connect } from 'react-redux';
+import { SET_STOCK_START } from 'utils/constants/actions';
 
 import stocks from 'assets/data/stocks.json';
 
@@ -10,7 +12,10 @@ class Search extends Component {
   }
 
   handleChange = (selectedOption) => {
+    const { setStock } = this.props;
     this.setState({ selectedOption });
+
+    setStock(selectedOption);
   }
 
   loadOptions = (inputValue, callback) => {
@@ -60,8 +65,20 @@ class Search extends Component {
   }
 }
 
-Search.propTypes = {
-  t: PropTypes.func
+const mapDispatchToProps = dispatch => {
+  return {
+    setStock: (selectedStock) => {
+      dispatch({
+        type: SET_STOCK_START,
+        selectedStock
+      });
+    }
+  };
 };
 
-export default Search;
+Search.propTypes = {
+  t: PropTypes.func,
+  setStock: PropTypes.func
+};
+
+export default connect(null, mapDispatchToProps)(Search);
