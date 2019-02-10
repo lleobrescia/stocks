@@ -1,3 +1,8 @@
 {
-  "siteTitle": "stocks."
+  "siteTitle": "stocks.",
+  "search": {
+    "placeholder": "Pesquisar",
+    "notFound": "Nada foi encontrado",
+    "typeToSearch": "Digite algo para pesquisar"
+  }
 }
