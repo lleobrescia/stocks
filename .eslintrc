@@ -37,6 +37,7 @@
     "btoa": true,
     "atob": true,
     "window": true,
+    "setTimeout": true,
     "FileReader": true
   },
   "settings": {

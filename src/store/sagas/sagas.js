@@ -1,8 +1,10 @@
 import { all } from 'redux-saga/effects';
 
-function* Sagas () {
-  yield all([
+import SearchSaga from './SearchSaga';
 
+function* Sagas() {
+  yield all([
+    SearchSaga()
   ]);
 }
 
