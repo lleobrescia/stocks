@@ -1,12 +1,15 @@
 import i18n from 'i18next';
-import {  initReactI18next } from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
+
+import PTGeneral from 'assets/locales/pt/General.json';
 
 const resources = {
   'pt': {
+    'General': PTGeneral,
   }
 };
 
-const resourcesList = [];
+const resourcesList = [ 'General' ];
 
 i18n
   .use(initReactI18next)
@@ -26,7 +29,7 @@ i18n
       enabled: true
     },
     load: 'languageOnly',
-    whitelist: ['pt'],
+    whitelist: [ 'pt' ],
     react: {
       wait: true
     }
