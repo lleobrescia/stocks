@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import AsyncSelect from 'react-select/lib/Async';
 import { connect } from 'react-redux';
@@ -6,7 +6,7 @@ import { SET_STOCK_START } from 'utils/constants/actions';
 
 import stocks from 'assets/data/stocks.json';
 
-class Search extends Component {
+class Search extends PureComponent {
   state = {
     selectedOption: null,
   }
