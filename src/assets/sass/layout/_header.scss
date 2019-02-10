@@ -1,0 +1,14 @@
+.header {
+  background: url('../../assets/images/bg-front.png') no-repeat center;
+  min-height: 455px;
+  background-size: cover;
+  text-align: center;
+  width: 100vw;
+  padding-top: 81px;
+
+  &__title {
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: -4.6px;
+  }
+}

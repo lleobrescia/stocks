@@ -1,0 +1,41 @@
+// COLORS
+:root {
+  --white: #e2e2e2;
+  --warm-grey: #939393;
+  --warm-grey-two: #9a9a9a;
+  --pale-purple: #ba7fd8;
+  --greenish-teal: #2ecc71;
+  --peachy-pink: #ff8e8e;
+  --sandy-two: #f3d36f;
+  --brownish-grey: #606060;
+  --brownish-grey-two: #6d6d6d;
+  --pink-purple: #c545df;
+  --greyish-two: #a9a9a9;
+  --sandy: #f4db6f;
+}
+
+
+$body-bg: #fafafa;
+
+
+// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500,700');
+
+$font-family-base: 'Roboto', sans-serif;
+$font-family-secondary: 'Montserrat', sans-serif;
+
+$font-size-base: 1.125rem;
+$font-size-lg: 1.250rem;
+$font-size-sm: 0.875rem;
+$h1-font-size: 2.813rem;
+$h2-font-size: 1.125rem;
+$small-font-size: $font-size-sm;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-family-secondary;
+}
+
