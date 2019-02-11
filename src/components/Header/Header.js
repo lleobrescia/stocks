@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Search from 'components/Search';
 
 const Header = props => {
-  const { t } = props;
+  const { t, hasSearch } = props;
 
   return (
     <header className="header">
@@ -12,13 +12,17 @@ const Header = props => {
         { t('siteTitle') }
       </h1>
 
-      <Search t={ t } />
+      {
+        hasSearch ? (<Search t={ t } />) : null
+      }
+
     </header>
   );
 };
 
 Header.propTypes = {
-  t: PropTypes.func
+  t: PropTypes.func,
+  hasSearch: PropTypes.bool
 };
 
 export default Header;

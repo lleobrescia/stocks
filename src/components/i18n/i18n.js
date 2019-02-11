@@ -3,15 +3,17 @@ import { initReactI18next } from 'react-i18next';
 
 import PTGeneral from 'assets/locales/pt/General.json';
 import PTStocks from 'assets/locales/pt/Stocks.json';
+import PTHome from 'assets/locales/pt/Home.json';
 
 const resources = {
   'pt': {
     'General': PTGeneral,
-    'Stocks': PTStocks
+    'Stocks': PTStocks,
+    'Home': PTHome
   }
 };
 
-const resourcesList = [ 'General', 'Stocks' ];
+const resourcesList = [ 'General', 'Stocks', 'Home' ];
 
 i18n
   .use(initReactI18next)
