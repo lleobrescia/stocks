@@ -1,0 +1,28 @@
+.home {
+  min-height: 100vh;
+
+  .search-title {
+    font-size: $font-family-base;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: var(--warm-grey);
+    margin-bottom: 20px;
+  }
+
+  .no-search {
+    display: flex;
+    height: 487px;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 219px;
+      font-size: $font-size-lg;
+      font-weight: 500;
+      line-height: 1.6;
+      text-align: center;
+      color: #c8c8c8;
+      margin-top: 24px;
+    }
+  }
+}
