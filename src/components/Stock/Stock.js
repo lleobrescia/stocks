@@ -1,14 +1,37 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
+import Modal from 'components/Modal';
+
 import icArrowTop from 'assets/icons/ic-arrow-top.svg';
 import icArrowDown from 'assets/icons/ic-arrow-down.svg';
 class Stock extends PureComponent {
-  state = { isCollapsed: false }
+  state = {
+    isCollapsed: false,
+    activeModal: false,
+    modalTitle: ''
+  }
 
   toggleCollapse = () => {
     this.setState({ isCollapsed: !this.state.isCollapsed });
   }
+
+  onClickAction = actionType => {
+    const { t } = this.props;
+    let frase = t('stocks.sellAction');
+
+    if (actionType === 'buy') {
+      frase = t('stocks.buyAction');
+    }
+
+    this.setState({
+      activeModal: true,
+      modalTitle: frase
+    });
+  }
+
+  removeModal = () => this.setState({ activeModal: false })
+
   render() {
     const { t, info, logo, title } = this.props;
     const action = info.openingvalue > info.actualvalue ? 'buy' :
@@ -16,6 +39,13 @@ class Stock extends PureComponent {
 
     return (
       <div className='stock'>
+        <Modal
+          t={ t }
+          title={ this.state.modalTitle }
+          onClicYes={ () => this.removeModal() }
+          onClickNo={ () => this.removeModal() }
+          showModal={ this.state.activeModal } />
+
         <div className="card">
           <div className="card-header">
             <img src={ logo } alt="" />
@@ -45,7 +75,7 @@ class Stock extends PureComponent {
               <p className={ `value ${action === 'sell' ? 'value--green' : 'value--red'}` }>
                 { t('stocks.actual') }: <span>{ info.actualvalue.replace('.', ',') }</span>
               </p>
-              <button type="button" className="btn float-sm-right">
+              <button onClick={ () => this.onClickAction(action) } type="button" className="btn float-sm-right">
                 { t(`stocks.${action}`) }
               </button>
             </div>
