@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { I18nextProvider, withTranslation  } from 'react-i18next';
+import { I18nextProvider, withTranslation } from 'react-i18next';
 import { ConnectedRouter } from 'connected-react-router';
 import i18n from 'components/i18n';
+import { Route, Switch } from 'react-router';
+import * as urls from 'utils/constants/urls';
 
 import Header from 'components/Header';
+import Home from 'views/Home';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     const { history, t } = this.props;
 
@@ -15,6 +18,12 @@ class App extends Component {
         <ConnectedRouter history={ history }>
           <section className='site-body'>
             <Header t={ t } />
+            <Switch>
+              <Route exact path={ urls.HOME } component={ () => {
+                return <Home t={ t } />;
+              }
+              } />
+            </Switch>
           </section>
         </ConnectedRouter>
       </I18nextProvider>
@@ -27,4 +36,4 @@ App.propTypes = {
   t: PropTypes.func
 };
 
-export default withTranslation ()(App);
+export default withTranslation()(App);
