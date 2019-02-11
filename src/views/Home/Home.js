@@ -17,14 +17,14 @@ class Home extends PureComponent {
             (<div className="no-search">
               <div className="text-center">
                 <img src={ IcNoSrarch } alt="" />
-                <p>Você ainda não realizou nenhuma busca!</p>
+                <p>{ t('home.noSearch') }</p>
               </div>
             </div>) :
 
             (<div className="container">
               <div className="row">
                 <div className="col-12">
-                  <h2 className="search-title">Resultado da busca</h2>
+                  <h2 className="search-title">{ t('home.searchResult') }</h2>
                   {
                     stock.stock.map(item => (
                       <Stock t={ t } key={ item.name } info={ item } logo={ stock.logo } title={ stock.name } />
