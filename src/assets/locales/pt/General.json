@@ -1,0 +1,11 @@
+{
+  "no": "Não",
+  "pageNotFound": "Página não encontrada.",
+  "search": {
+    "notFound": "Nada foi encontrado",
+    "placeholder": "Pesquisar",
+    "typeToSearch": "Digite algo para pesquisar"
+  },
+  "siteTitle": "stocks.",
+  "yes": "Sim"
+}

@@ -1,0 +1,12 @@
+{
+  "stocks": {
+    "actual": "Atual",
+    "buy": "Vender",
+    "buyAction": "Tem certeza que deseja comprar essa ação?",
+    "hideDetails": "Ocultar detalhes da ação",
+    "opening": "Abertura",
+    "sell": "Comprar",
+    "sellAction": "Tem certeza que deseja vender essa ação?",
+    "showDetails": "Ver detalhes da ação"
+  }
+}
