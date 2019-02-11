@@ -25,4 +25,9 @@ Header.propTypes = {
   hasSearch: PropTypes.bool
 };
 
+Header.defaultProps = {
+  t: () => { },
+  hasSearch: true
+};
+
 export default Header;
