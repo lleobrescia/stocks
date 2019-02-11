@@ -15,19 +15,24 @@ All notable changes to this project will be documented in this file.
 
 ## 1.0.0 - 2019-02-11
 ### Added
-- Components:
-  - Header
-  - Modal
-  - Search
-  - Stock
-- Views:
-  - Not found
-  - Home
-- Tests:
-  - App
-  - Not found
-  - Home
-  - Header
+Components:
+
+  * Header
+  * Modal
+  * Search
+  * Stock
+  
+Views:
+
+  * Not found
+  * Home
+  
+Tests:
+
+  * App
+  * Not found
+  * Home
+  * Header
 
 ## 0.1.0 - 2019-02-08
 ### Added
