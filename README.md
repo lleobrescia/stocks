@@ -88,15 +88,16 @@ v1.10.1
 ### GIT Flow
 O [GIT Flow](https://br.atlassian.com/git/tutorials/comparing-workflows) é utilizado como metodologia para a utilização do GIT.
 As seguintes *branches* são utilizadas:
+
 |Nome da *branch*  | Motivo  |
 |--|--|
-|master	| para versões de produção |
-|develop|para o desenvolvimento da "próxima versão"|
-|feature |para nova feature|
-|bugfix|para conserto de bug|
-|release| para nova versão|
-|hotfix | para conserto de bug em produção|
-|support|para conserto de bug em versões antigas|
+|master		| para versões de produção |
+|develop	|para o desenvolvimento da "próxima versão"|
+|feature 	|para nova feature|
+|bugfix		|para conserto de bug|
+|release	| para nova versão|
+|hotfix 	| para conserto de bug em produção|
+|support	|para conserto de bug em versões antigas|
 
 
 
@@ -193,7 +194,8 @@ Utilize as seguintes práticas no desenvolvimento:
  -  [CSS Guideline](https://cssguidelin.es/#introduction)  para boas práticas no CSS.
 
 ### JS
-Esse projeto utiliza o [ESLint](https://eslint.org/) para evitar erros e manter consistência. Por favor, use o plugin  apropriado para o seu Editor.
+Esse projeto utiliza o [ESLint](https://eslint.org/) para evitar erros e manter consistência. 
+Por favor, use o plugin  apropriado para o seu Editor.
 As [regras](https://eslint.org/docs/rules/) utilizadas são:
 
 
@@ -258,6 +260,7 @@ $ yarn build
 ```
 ## Versões
 Essa seção é para manter um histórico de número de versões, para mais detalhes de cada versão veja o arquivo `CHENGELOG.md`.
+
 | Versão | Data |
 |--|--|
 | 1.0.0 | 11/02/2019  |
